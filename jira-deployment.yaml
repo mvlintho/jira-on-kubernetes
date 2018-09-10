@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: jira
-          image: "gcr.io/hightowerlabs/jira:7.3.6-standalone"
+          image: "eu.gcr.io/logical-dream-202314/jira-7.12.1:latest"
           resources:
             requests:
               cpu: "2"
