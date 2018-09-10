@@ -1,9 +1,9 @@
 # This Dockerfile is not awesome.
 # Use it as a starting point for your own Jira image.
-FROM centos:7.3.1611
+FROM centos:7.5.1804
 
 ENV JIRA_HOME="/opt/jira-home" \
-    JIRA_RELEASE="7.3.6"
+    JIRA_RELEASE="7.12.1"
 
 # JDK stuff
 RUN curl --location --junk-session-cookies --insecure --output /tmp/jdk-8u131-linux-x64.rpm \
