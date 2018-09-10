@@ -21,8 +21,8 @@ RUN mkdir -p ${JIRA_HOME} && \
         /opt/atlassian-jira-software-${JIRA_RELEASE}-standalone/atlassian-jira/WEB-INF/classes/jira-application.properties
 
 ## Postgres driver fix
-RUN curl https://jdbc.postgresql.org/download/postgresql-42.1.1.jar --output /tmp/postgresql-42.1.1.jar && \
+RUN curl https://jdbc.postgresql.org/download/postgresql-42.2.5.jar --output /tmp/postgresql-42.2.5.jar && \
     rm /opt/atlassian-jira-software-7.12.1-standalone/lib/postgresql-9.1-903.jdbc4-atlassian-hosted.jar && \
-    mv /tmp/postgresql-42.1.1.jar /opt/atlassian-jira-software-7.12.1-standalone/lib/postgresql-42.1.1.jar
+    mv /tmp/postgresql-42.2.5.jar /opt/atlassian-jira-software-7.12.1-standalone/lib/postgresql-42.2.5.jar
 
 ENTRYPOINT ["/opt/atlassian-jira-software-7.12.1-standalone/bin/catalina.sh", "run"]
